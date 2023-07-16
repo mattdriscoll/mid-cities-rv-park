@@ -8,6 +8,7 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Mid Cities RV Park",
   description: `DFW's newest RV park, located in the heart of the metroplex. We are a family owned and operated RV park with a focus on providing a safe, clean, and friendly environment for our guests.`,
+  metadataBase: new URL("https://midcitiesrvpark.com/"),
 };
 
 export default function RootLayout({
