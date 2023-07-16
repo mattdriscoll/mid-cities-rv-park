@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans, Playfair } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mid Cities RV Park",
@@ -15,10 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} bg-mcrv-black text-mcrv-white flex flex-col min-h-screen`}
-      >
+    <html
+      lang="en"
+      className={`${[openSans.className, playfair.className].join(" ")}`}
+    >
+      <body className="font-open-sans bg-mcrv-black text-mcrv-white flex flex-col min-h-screen">
         {children}
       </body>
     </html>

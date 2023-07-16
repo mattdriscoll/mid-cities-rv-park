@@ -3,7 +3,7 @@ import SectionContainer from "./SectionContainer";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto bg-mcrv-black text-mcrv-white">
+    <footer className="mt-auto bg-mcrv-black text-mcrv-white py-2">
       <SectionContainer>
         <div className="flex flex-row justify-between items-center">
           <p className="text-center text-sm">

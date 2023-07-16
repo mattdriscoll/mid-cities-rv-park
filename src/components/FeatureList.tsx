@@ -10,9 +10,7 @@ const FeatureList = ({ features }: FeatureListProps) => {
     <section data-section="feature-list">
       <SectionContainer>
         <div className="flex flex-col py-12 lg:py-20">
-          <h2 className="text-2xl font-bold text-center mb-12 lg:mb-16">
-            Features
-          </h2>
+          <h2 className="text-center mb-12 lg:mb-16">Features</h2>
           {Array.isArray(features) && features.length > 0 && (
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10">
               {features.map(({ title, icon }) => (
@@ -33,9 +31,9 @@ const FeatureList = ({ features }: FeatureListProps) => {
                       />
                     </svg>
                   </div>
-                  <h2 className="mt-4 text-xl font-semibold leading-tight ">
+                  <p className="mt-4 text-xl font-semibold leading-tight ">
                     {title}
-                  </h2>
+                  </p>
                 </li>
               ))}
             </ul>

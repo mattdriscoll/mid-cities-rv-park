@@ -64,6 +64,7 @@ export default function Home() {
         <Hero
           title="Mid Cities RV Park"
           subtitle="DFW's newest RV park, located in the heart of the metroplex. We are a family owned and operated RV park with a focus on providing a safe, clean, and friendly environment for our guests."
+          bgImage="/bg-hero.jpg"
         />
         <FeatureList features={features} />
         <ContactForm />

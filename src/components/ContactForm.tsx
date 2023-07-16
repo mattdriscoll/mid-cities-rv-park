@@ -27,7 +27,7 @@ const ContactForm = () => {
         </h2>
 
         <div className="flex flex-col items-center">
-          <div className="w-full md:w-10/12 lg:w-8/12">
+          <div className="w-full md:w-10/12 lg:w-8/12 xl:w-6/12">
             <Script
               src="//js.hsforms.net/forms/embed/v2.js"
               onReady={() => setHbsptScriptLoaded((val) => !val)}

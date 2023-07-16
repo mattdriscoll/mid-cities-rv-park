@@ -5,3 +5,19 @@
 a {
   @apply text-inherit hover:text-mcrv-red transition-colors;
 }
+
+h1 {
+  @apply font-playfair text-3xl lg:text-5xl font-semibold;
+}
+
+h2 {
+  @apply font-playfair text-2xl lg:text-3xl font-bold;
+}
+
+h3 {
+  @apply font-playfair;
+}
+
+h4 {
+  @apply font-open-sans;
+}

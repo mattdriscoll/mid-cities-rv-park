@@ -4,7 +4,7 @@ import SectionContainer from "./SectionContainer";
 
 const Header = () => {
   return (
-    <header>
+    <header className="fixed w-full bg-mcrv-black bg-opacity-70 z-50">
       <SectionContainer>
         <div className="flex flex-row justify-between items-center py-4 lg:py-6">
           <Link href="/" className="text-inherit block w-full text-center">
@@ -12,7 +12,7 @@ const Header = () => {
             <Image
               src="/mid-cities-rv-park.png"
               alt="Mid Cities RV Park"
-              className="w-32 lg:w-40"
+              className="w-24 lg:w-28"
               width={300}
               height={234}
             />
