@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 import SectionContainer from "./SectionContainer";
 
 export type HeroProps = {
@@ -14,20 +14,21 @@ const Hero = ({ title, subtitle, bgImage = null }: HeroProps) => {
       className="grid grid-cols-1 grid-rows-1 lg:min-h-[76vh]"
     >
       {bgImage && (
-        // <Image
-        //   src={bgImage}
-        //   alt="RV Park"
-        //   height="640"
-        //   width="853"
-        //   className="row-start-1 col-start-1 object-cover object-center w-full h-full"
-        // />
-        <img
-          src={bgImage}
-          alt={title}
+        <Image
+          // src={bgImage}
+          src="/bg-hero.jpg"
+          alt="RV Park"
           height="640"
           width="853"
           className="row-start-1 col-start-1 object-cover object-center w-full h-full"
         />
+        // <img
+        //   src={bgImage}
+        //   alt={title}
+        //   height="640"
+        //   width="853"
+        //   className="row-start-1 col-start-1 object-cover object-center w-full h-full"
+        // />
       )}
       <div className="row-start-1 col-start-1 bg-mcrv-black opacity-40 z-0"></div>
       <SectionContainer isHeroLayout>
