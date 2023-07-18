@@ -24,31 +24,134 @@ export default defineConfig({
         name: "page",
         label: "Pages",
         path: "content/pages",
-        fields: [],
-      },
-      {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        format: "mdx",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
-            isTitle: true,
-            required: true,
+          },
+          {
+            type: "string",
+            name: "slug",
+            label: "Slug",
           },
           {
             type: "rich-text",
             name: "body",
             label: "Body",
             isBody: true,
+            templates: [
+              {
+                name: "Hero",
+                label: "Hero",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title",
+                  },
+                  {
+                    type: "string",
+                    name: "subtitle",
+                    label: "Subtitle",
+                  },
+                  {
+                    type: "image",
+                    name: "bgImage",
+                    label: "Background Image",
+                  },
+                ],
+              },
+              {
+                name: "ImageGallery",
+                label: "Image Gallery",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Section Title",
+                  },
+                  {
+                    type: "object",
+                    name: "images",
+                    label: "Images",
+                    list: true,
+                    fields: [
+                      {
+                        type: "image",
+                        name: "image",
+                        label: "Image",
+                      },
+                      {
+                        type: "string",
+                        name: "caption",
+                        label: "Caption",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "FeatureList",
+                label: "Feature List",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Section Title",
+                  },
+                  {
+                    type: "object",
+                    name: "features",
+                    label: "Features List",
+                    list: true,
+                    fields: [
+                      {
+                        type: "string",
+                        name: "title",
+                        label: "Title",
+                      },
+                      // {
+                      //   type: "string",
+                      //   name: "icon",
+                      //   label: "Icon",
+                      // },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: "ContactForm",
+                label: "Contact Form",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Section Title",
+                  },
+                  {
+                    type: "object",
+                    name: "form",
+                    label: "Form",
+                    fields: [
+                      {
+                        type: "string",
+                        name: "portalId",
+                        label: "Hubspot Portal ID",
+                      },
+                      {
+                        type: "string",
+                        name: "formId",
+                        label: "Hubspot Form ID",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
       },
     ],
   },

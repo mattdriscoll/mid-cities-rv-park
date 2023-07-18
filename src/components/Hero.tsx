@@ -26,9 +26,10 @@ const Hero = ({ title, subtitle, bgImage = null }: HeroProps) => {
       <SectionContainer isHeroLayout>
         <div className="flex flex-col mt-32 lg:mt-40 py-32 lg:py-48 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto">
           <h1 className=" text-center mb-12 lg:mb-16 ">{title}</h1>
-          <p className="text-2xl font-medium text-center mb-12 lg:mb-16">
-            {subtitle}
-          </p>
+          <p
+            className="text-2xl font-medium text-center mb-12 lg:mb-16"
+            dangerouslySetInnerHTML={{ __html: subtitle }}
+          ></p>
         </div>
       </SectionContainer>
     </section>
