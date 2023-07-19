@@ -25,7 +25,10 @@ const FeatureItem = ({ title }: FeatureItem) => (
     <div className="w-12 h-12  text-mcrv-white ">
       <FeatureIcon />
     </div>
-    <p className="md:mt-4 text-xl font-semibold leading-tight ">{title}</p>
+    <p
+      className="md:mt-4 text-xl font-semibold leading-tight"
+      dangerouslySetInnerHTML={{ __html: title }}
+    />
   </li>
 );
 
