@@ -18,12 +18,12 @@ const Header = () => {
             />
           </Link>
 
-          <Link
+          <a
             href="#contact"
             className="text-inherit block w-full text-end text-lg font-bold"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
       </SectionContainer>
     </header>
