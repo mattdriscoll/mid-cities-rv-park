@@ -102,6 +102,11 @@ export default defineConfig({
                     label: "Section Title",
                   },
                   {
+                    type: "rich-text",
+                    name: "body",
+                    label: "Body",
+                  },
+                  {
                     type: "object",
                     name: "features",
                     label: "Features List",

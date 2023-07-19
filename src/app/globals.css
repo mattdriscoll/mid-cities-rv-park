@@ -21,3 +21,7 @@ h3 {
 h4 {
   @apply font-open-sans;
 }
+
+p {
+  @apply font-open-sans text-xl font-semibold leading-tight mb-6 last:mb-0;
+}

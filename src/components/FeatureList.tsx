@@ -1,3 +1,4 @@
+import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text";
 import SectionContainer from "./SectionContainer";
 
 interface FeatureItem {
@@ -6,6 +7,7 @@ interface FeatureItem {
 
 interface FeatureListProps {
   title: string;
+  body: TinaMarkdownContent | null;
   features: FeatureItem[];
 }
 
@@ -19,20 +21,25 @@ const FeatureIcon = () => (
 );
 
 const FeatureItem = ({ title }: FeatureItem) => (
-  <li className="p-6 text-mcrv-white rounded-lg mx-auto w-10/12 sm:w-8/12 md:w-full">
-    <div className="w-12 h-12  text-mcrv-white rounded-md">
+  <li className="grid grid-cols-[3rem,_1fr] gap-8 md:block py-6 text-mcrv-white mx-auto w-full md:w-full">
+    <div className="w-12 h-12  text-mcrv-white ">
       <FeatureIcon />
     </div>
-    <p className="mt-4 text-xl font-semibold leading-tight ">{title}</p>
+    <p className="md:mt-4 text-xl font-semibold leading-tight ">{title}</p>
   </li>
 );
 
-const FeatureList = ({ title, features }: FeatureListProps) => {
+const FeatureList = ({ title, body = null, features }: FeatureListProps) => {
   return (
     <section data-section="feature-list">
       <SectionContainer>
         <div className="flex flex-col py-12 lg:py-20">
           <h2 className="text-center mb-12 lg:mb-16">{title}</h2>
+          {body && (
+            <div className="prose prose-lg max-w-none mb-12 lg:mb-16">
+              <TinaMarkdown content={body} />
+            </div>
+          )}
           {Array.isArray(features) && features.length > 0 && (
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10">
               {features.map(({ title }) => (
